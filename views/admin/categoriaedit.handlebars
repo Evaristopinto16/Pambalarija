@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <h1 align="center">Editar Categoria</h1>
+    <div class="card mt-3">
+        <div class="card-body">
+            <form action="/adicionar/nova" method="post"> 
+            <input type="hidden" name="id" id="id" value="{{categoria._id}}">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" class="form-control" value="{{categoria.nome}}"> <br>
+                <button type="submit" class="btn btn-success">Editar</button>
+            </form>
+            
+        </div>
+    </div>
+</div>

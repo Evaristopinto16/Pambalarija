@@ -1,0 +1,27 @@
+ 
+
+<div class="container mt-5">
+    <h1 align="center">Publicar Produto</h1> 
+    <div class="card">
+        <form action="postagem/nova" method="post" enctype="multipart/form-data">
+            <label for="foto">Manda Foto da Cena</label>
+            <input type="file" name="foto" class="form-control" required> 
+            <label for="nome">Nome da Cena</label>
+            <input type="text" name="nome" class="form-control" required>
+            <label for="descricao">Descrição da Cena</label>
+             <textarea name="descricao" id="" cols="10" rows="2" class="form-control" placeholder="ex. IOS 14, de cor preta, baterias 70% 2 ano de uso"></textarea>
+            <label for="preco">preço da cena <strong>.kz</strong></label>
+            <input type="number" class="form-control" required name="preco">
+            <label for="categoria">Categoria</label>
+            <select name="categoria" id="categoria" class="form-control"> 
+                {{#each categoria}}
+                <option value="{{_id}}"> {{nome}}</option>
+                {{else}}
+                <option value="" >sem categoria</option>
+                {{/each}}
+                
+            </select>
+            <button class="btn alert-success mt-2">publicar</button> <a href="/" class="btn alert-danger mt-2">voltar</a>
+        </form>
+    </div>
+</div>

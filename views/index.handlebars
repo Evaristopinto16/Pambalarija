@@ -1,0 +1,90 @@
+ <style>
+     #img{
+        height: 20rem;
+     }
+     #container2{
+        background-color: aliceblue;
+     }
+ </style>
+ 
+ <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"  aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"  aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../public/Bambaleirorijo/photo_5820907750102777695_y.jpg"  class="d-block w-100" alt="imagem" height="400">
+                <div class="carousel-caption d-none d-md-block">
+                     <h1><strong>ESTUDYcamba</strong></h1>
+                     <p class="lead"> Parilhar, Criar, Facilitar isso é a ESTUDYcamba</p>
+                </div>  
+            </div>
+            <div class="carousel-item">
+                <img src="../public/Bambaleirorijo/photo_5832662611735460905_y.jpg" class="d-block w-100" alt="imagem" height="400">
+                <div class="carousel-caption d-none d-md-block">
+                     <h1>oportunidade</h1>
+                     <p class="lead">A Empresa Banese está a reclutar novos funcionarios</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../public/Bambaleirorijo/photo_5834914411549145799_y.jpg" class="d-block w-100" alt="imagem" height="400">
+                <div class="carousel-caption d-none d-md-block">
+                      <h1><strong>Liga-se ao futuro Com a ESTUDYcamba</strong></h1>
+                     <p class="lead">O </p>
+                </div>
+            </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">next</span>
+            </button>
+ </div>
+
+ <div class="container">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-3 col-md-3"><ul>anola</ul></div>
+        <div class="col-sm-3 col-md-3"><ul>anola</ul></div>
+        <div class="col-sm-3 col-md-3"><ul>anola</ul></div> 
+       
+       
+
+         
+    </div>
+ </div>
+ <div class="container" id="container2">
+    <div class="row justify-content-sm-center">
+        {{#each postagens}}
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-5">
+                    <img  class="card-img-top" src="../public/produto/{{foto}}" id="img">
+                    <div class="card-body">
+                    <h4 class="card-title">{{nome}}</h4>
+                    <h6 class="card-subtitle text-muted mb-2">{{descricao}}</h6>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Preço {{preco}}</li>
+                    <li class="list-group-item">Percentagem de açucar: 75%</li>
+                    </ul>
+                    <div class="card-body">
+                    <a href="productos.html" class="card-link">Mais...</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Chocolife: Sinta a doçura
+                    </div>
+                </div>
+            </div> 
+               {{/each}}
+            
+            </div>
+   
+    
+    
+ </div>

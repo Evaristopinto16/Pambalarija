@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <h1 align="center">Categorias</h1>
+     <a href="/admin/add" class="btn btn-success">Adicionar Categorias</a>
+      {{#each categoria}}
+    <div class="card ">
+       
+        <div class="card-body"> 
+            <h4>Nome: {{nome}}</h4> <br>
+            <a href="/categoria/editar/{{_id}}" class="btn btn-success">Editar</a><br>
+            <a href="/categoria/deletar/{{_id}}" class="btn btn-danger ">Eliminar</a>
+             </div> 
+        </div>
+        {{else}}
+        <h4>Sem Registro de Categoria</h4>
+
+      {{/each}}
+</div>

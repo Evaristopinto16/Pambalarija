@@ -1,0 +1,18 @@
+
+<br>
+<h2 align="center">postagem</h2>
+<div class="container">
+    <a href="/postagem" class="btn btn-success">nova postagens</a>
+    {{#each postagem}}
+    <div class="card">
+        
+        <card-body>
+            <h4>{{nome}}</h4>
+            <small>{{preco}}</small>
+            <p>{{descricao}}</p>
+            <a href="/postagem/adm/deletar/{{_id}}" class="btn btn-danger">Eliminar</a>
+        </card-body>
+    </div>
+    {{/each}}
+
+</div>
